@@ -1,0 +1,109 @@
+/* Общие параметры и параметры для больших экранов*/
+body
+{
+	background-color: #C0C0C0;
+	font-family: Arial Narrow,Trebuchet MS,Arial,Verdana,Tahoma;
+	margin-top:0px;
+	margin-bottom:0px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container
+{
+	flex-basis:80%;
+	background-color: #fff;
+	height:100%;
+} 
+.autho
+{
+	line-height:150%;
+	display:flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.header
+{
+	display:flex;
+	justify-content: space-between;
+	height:80px;
+}
+.left-info
+{
+	display:flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+.right-info
+{
+	display:flex;
+	flex-direction: column;
+	align-items: flex-end;
+}
+.info
+{
+	display:flex;
+	flex-direction:row;
+}
+.content
+{
+	line-height: 90%;
+	display:flex;
+	justify-content: space-around;
+}
+.left-content
+{
+	display:flex;
+	flex-direction: column;
+	margin:auto;
+}
+.right-content
+{
+	display:flex;
+	flex-direction: column;
+	margin:auto;
+}
+.footer
+{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+/* Для средних экранов*/
+@media all and (max-width: 800px){
+/* Пока не знаю что изменить, вроде норм выглядит*/
+}
+/* Для маленьких экранов*/
+@media all and (max-width: 500px){
+body
+{
+	background-color: #fff;
+}
+.container
+{
+	flex-basis:100%;
+	background-color: #fff;
+	height:100%;
+}
+.right-info
+{
+	flex-wrap:nowrap;
+}
+.info
+{
+	flex-direction:column;
+	line-height:90%;
+}
+.content
+{
+	flex-direction: column;
+}
+.left-content
+{
+	order:2;
+}
+.right-content
+{
+	order:1;
+}
+}
