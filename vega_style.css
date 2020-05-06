@@ -263,3 +263,30 @@ body
 	color:#fff;
 }
 }
+/* Дистанционное обучение пример страницы/dist */
+.content-dist-ex div
+{
+	padding:10px;
+	border:1px solid black;
+}
+.content-dist-ex
+{
+	display:flex;
+	width:80%;
+	justify-content: center;
+	padding-left:10%;
+	flex-direction: column;
+	align-items: stretch;
+	margin-bottom:30px;
+}
+.number
+{
+	display: flex;
+	justify-content: center;
+	font-weight: bold;
+}
+.lesson
+{
+	display:flex;
+	flex-direction: column;
+}
