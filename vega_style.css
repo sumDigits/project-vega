@@ -1,5 +1,5 @@
 /* Общие параметры и параметры для больших экранов*/
-body
+body /* Тело(ааа, а я думала сова) */
 {
 	background-color: #C0C0C0;
 	font-family: Arial Narrow,Trebuchet MS,Arial,Verdana,Tahoma;
@@ -9,18 +9,19 @@ body
 	justify-content: center;
 	align-items: center;
 }
-.nametag
+.nametag /* span для выделения текста*/
 {
 	font-weight:bold;
 	font-size:125%;
 }
-.container
+.container  /* Блок контейнера всей страницы*/
 {
 	flex-basis:80%;
 	background-color: #fff;
 	height:100%;
-} 
-.autho
+}
+.header{}/* Блок шапки сайта*/
+.autho /* Блок авторизации внутри header*/
 {
 	padding-right:1%;
 	line-height:150%;
@@ -28,25 +29,20 @@ body
 	flex-direction: column;
 	align-items: flex-end;
 }
-.picture
+.picture  /* Блок картинки-хедера внутри header*/
 {
 	display:flex;
 	height:210px;
 	justify-content: space-between;
 }
-
-.header
-{
-	
-}
-.info
+.info /* Блок информации различных тем( о кафедре, о прикладной информатике...) внутри header*/
 {
 	height:40px;
 	padding-left:1%;
 	display:flex;
 	flex-direction:row;
 }
-.content-main
+.content-main  /* Блок основной информации главной страницы */
 {
 	height:750px;
 	line-height: 98%;
@@ -54,49 +50,65 @@ body
 	justify-content: space-around;
 	
 }
-.left-content-main
+.left-content-main /* Левый блок основной информации главной страницы внутри .content-main */  
 {
 	display:flex;
 	flex-direction: column;
 	margin:auto;
 }
-.right-content-main
+.right-content-main /* Правый блок основной информации главной страницы внутри .content-main */
 {
 	display:flex;
 	flex-direction: column;
 	margin:auto;
 }
-.footer
+.footer/* Блок подвала сайта*/
 {
 	display:flex;
 	flex-direction: column;
 }
-.feedback
+.feedback /* Блок обратной связи сайта внутри footer */
 {
 	height:25px;
 	text-align:center;
 	background-image: url('files/footer.png');
 	
 }
-.description
+.description /* Блок описания сайта внутри footer */ 
 {
 	text-align:center;
 }
+@media all and (max-width: 1060px){
+.autho /* Блок авторизации внутри header*/
+{
+	padding-top:10px;
+}
+.picture /* Блок картинки-хедера внутри header*/
+{
+	height:100px;
+	background-image: url('files/header-left-mini.png');
+	cursor:pointer;
+}
+.left-info, .right-info /* Блок информации, расположенной на картинке лого Веги внутри left-picture*/
+{                       /* Блок информации, расположенной на картинке самолёта внутри right-picture*/
+	color:rgba(0,0,0,0);
+}
+}
 @media all and (min-width: 1060px){
-.picture
+.picture /* Блок картинки-хедера внутри header*/
 {
 	display:flex;
 	height:210px;
 	justify-content: space-around;
 	cursor:pointer;
 }
-.left-picture
+.left-picture /*Блок картинки лого Веги внутри picture */
 {
 	flex-basis:550px;
 	background-image: url('files/header-left.png');
 	background-repeat:no-repeat;
 }
-.left-info
+.left-info /* Блок информации, расположенной на картинке лого Веги внутри left-picture*/
 {
 	font-size:80%;
 	padding-left:1%;
@@ -105,17 +117,17 @@ body
 	flex-direction: column;
 	align-items: flex-start;
 }
-.indent
+.indent /* Блок верхнего куска информации(Направление "Прикладная...), расположенной на картинке лого Веги внутри left-picture*/
 {
 	padding-left:10%;
 }
-.center-picture
+.center-picture /*Блок картинки оранжевой полоски внутри picture */
 {
 	background-image: url('files/header-center.png');
 	flex-grow:1;
 	background-repeat:repeat-x;
 }
-.right-picture
+.right-picture /*Блок картинки самолёта внутри picture */
 {
 	display:flex;
 	flex-direction: column;
@@ -124,7 +136,7 @@ body
 	background-image: url('files/header-right.png');
 	background-repeat:no-repeat;
 }
-.right-info
+.right-info /* Блок информации, расположенной на картинке самолёта внутри right-picture*/
 {
 	font-size:80%;
 	padding-top:95.5px;
@@ -135,63 +147,48 @@ body
 }
 }
 @media all and (max-width: 	1200px){
-.container
+.container /* Блок контейнера всей страницы*/
 {
 	flex-basis:85%;
 }
 }
-@media all and (max-width: 1060px){
-.autho
-{
-	padding-top:10px;
-}
-.picture
-{
-	height:100px;
-	background-image: url('files/header-left-mini.png');
-	cursor:pointer;
-}
-.left-info, .right-info
-{
-	color:rgba(0,0,0,0);
-}
-}
+
 @media all and (max-width: 800px){
-.container
+.container /* Блок контейнера всей страницы*/
 {
 	flex-basis:90%;
 }
 }
 /* Для маленьких экранов*/
 @media all and (max-width: 700px){
-body
+body /* Тело */
 {
 	background-color: #fff;
 	padding:0;
 	margin:0;
 }
-.container
+.container /* Блок контейнера всей страницы*/
 {
 	flex-basis:100%;
 	background-color: #fff;
 	height:100%;
 }
-.info
+.info /* Блок информации различных тем( о кафедре, о прикладной информатике...) внутри header*/
 {
 	height:110px;
 	flex-direction:column;
 	line-height:90%;
 }
-.content-main
+.content-main /* Блок основной информации главной страницы */
 {
 	height:1250px;
 	flex-direction: column;
 }
-.left-content-main
+.left-content-main /* Левый блок основной информации главной страницы внутри .content-main */
 {
 	order:2;
 }
-.right-content-main
+.right-content-main /* Правый блок основной информации главной страницы внутри .content-main */
 {
 	order:1;
 }
@@ -199,13 +196,13 @@ body
 @media all and(max-width: 600px){
 
 }
-/* Дистанционное обучение /dist */
-.content-dist
+/*                                                                                     Дистанционное обучение /dist                                             */
+.content-dist/* Блок основного контента страницы /dist*/
 {
 	display:flex;
 	flex-direction: column;
 }
-.header-dist
+.header-dist /* Блок заголовка-названия страницы*/
 {
 	display: flex;
 	justify-content: center;
@@ -213,24 +210,23 @@ body
 	font-weight: bold;
 	margin-bottom:30px;
 }
-.navigation-dist
+.navigation-dist /* Блок навигации по странице*/
 {
 	display: flex;
 	justify-content: center;
 }
-.news-dist
+.news-dist /* Блок новостей страницы */
 {
 	display:flex;
 	flex-direction: column;
 	line-height:110%;
 	padding-left:20px;
 }
-.li-news-dist
+.li-news-dist /*span редактирования пунктов списка внутри news-dist */
 {
-	
 	font-weight: 500;
 }
-.first-content-dist
+.first-content-dist /* Блок первой части основного контента страницы (планы занятий)*/
 {
 	display:flex;
 	flex-direction: column;
@@ -238,7 +234,7 @@ body
 	margin-top:10px;
 	margin-bottom:10px;
 }
-.second-content-dist
+.second-content-dist /* Блок второй части основного контента страницы (различная информация)*/
 {
 	display:flex;
 	flex-direction: column;
@@ -246,16 +242,17 @@ body
 	line-height: 100%;
 	margin-bottom:30px;
 }
+ /* Для маленьких экранов*/
 @media all and (max-width: 700px){
-.content-dist
+.content-dist /* Блок основного контента страницы /dist*/
 {
 	padding-left:10px;
 }
-.header-dist
+.header-dist /* Блок заголовка-названия страницы*/
 {
 	margin-bottom:10px;
 }
-.navigation-dist
+.navigation-dist /* Блок навигации по странице*/
 {
 	height: 110px;
 	line-height:90%;
@@ -263,30 +260,65 @@ body
 	color:#fff;
 }
 }
-/* Дистанционное обучение пример страницы/dist */
-.content-dist-ex div
+/*                                                                                     Дистанционное обучение, пример страницы /dist                                         */
+
+.course /*Блок номера курса внутри cell  */
 {
 	padding:10px;
 	border:1px solid black;
 }
-.content-dist-ex
+.lesson /*Блок учебных групп внутри cell */
+{
+	padding:10px;
+	border:1px solid black;
+}
+.content-dist-ex/*Блок основного контента для страницы плана занятий на день */
 {
 	display:flex;
-	width:80%;
+	width:80%;/*Блоки разных курсов могут отличаться по размеру и расположению относительно центра из-за этого параметра*/
 	justify-content: center;
-	padding-left:10%;
+	padding-left:8%;/*Блоки разных курсов могут отличаться по размеру и расположению относительно центра из-за этого параметра*/
 	flex-direction: column;
-	align-items: stretch;
+	align-items: center;
 	margin-bottom:30px;
+	margin-top:30px;
 }
-.number
+.cell /*Блок ячейки номера курса и учебных групп */
+{
+	display:flex;
+	flex-direction: row;
+
+}
+.course /*Блок номера курса внутри cell  */
 {
 	display: flex;
 	justify-content: center;
 	font-weight: bold;
+	width:10%;/*Блоки разных курсов могут отличаться по размеру и расположению относительно центра из-за этого параметра*/
 }
-.lesson
+.lesson /*Блок учебных групп внутри cell */
 {
 	display:flex;
 	flex-direction: column;
+	width:90%;/*Блоки разных курсов могут отличаться по размеру и расположению относительно центра из-за этого параметра*/
+}
+/* Для +-средних-маленьких экранов*/
+@media all and (max-width: 1060px){
+.cell /*Блок ячейки номера курса и учебных групп */
+{
+	display:flex;
+	flex-direction: column;
+}
+.course /*Блок номера курса внутри cell  */
+{
+	width:100%
+}
+.number /*span редактирования текста внутри номера курса lesson */
+{
+	font-size:150%;
+}
+.lesson /*Блок учебных групп внутри cell */
+{
+	width:100%;
+}
 }
