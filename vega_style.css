@@ -3,8 +3,7 @@ body /* Тело(ааа, а я думала сова) */
 {
 	background-color: #C0C0C0;
 	font-family: Arial Narrow,Trebuchet MS,Arial,Verdana,Tahoma;
-	margin-top:0px;
-	margin-bottom:0px;
+	margin:0px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -260,17 +259,30 @@ body /* Тело */
 	color:#fff;
 }
 }
-/*                                                                                     Дистанционное обучение, пример страницы /dist                                         */
-
-.course /*Блок номера курса внутри cell  */
+/*                                                                                 Дистанционное обучение, пример страницы плана дняё        */                                                                       
+@media all and (min-width: 1060px){
+.course /* Настройка черных границ таблиц для маленьких экранов */
 {
 	padding:10px;
 	border:1px solid black;
+	border-bottom:0px;
 }
-.lesson /*Блок учебных групп внутри cell */
+.content-dist-ex .cell:last-child .course /* Настройка черных границ таблиц для маленьких экранов */
 {
 	padding:10px;
-	border:1px solid black;
+	border-bottom:1px solid black;
+}
+.lesson /* Настройка черных границ таблиц для маленьких экранов */
+{
+	padding:10px;
+	border-top:1px solid black;
+	border-right:1px solid black;
+}
+.content-dist-ex  .cell:last-child .groups .lesson:last-child /* Настройка черных границ таблиц для маленьких экранов */
+{
+	padding:10px;
+	border-bottom:1px solid black;
+}
 }
 .content-dist-ex/*Блок основного контента для страницы плана занятий на день */
 {
@@ -287,6 +299,7 @@ body /* Тело */
 {
 	display:flex;
 	flex-direction: row;
+	width:100%;
 
 }
 .course /*Блок номера курса внутри cell  */
@@ -295,15 +308,32 @@ body /* Тело */
 	justify-content: center;
 	font-weight: bold;
 	width:10%;/*Блоки разных курсов могут отличаться по размеру и расположению относительно центра из-за этого параметра*/
+	word-break: normal;
 }
-.lesson /*Блок учебных групп внутри cell */
+.groups/*Блок учебных групп внутри cell */
+{
+	width:90%;
+}
+.lesson /*Блок одной учебной группы внутри groups */
 {
 	display:flex;
 	flex-direction: column;
-	width:90%;/*Блоки разных курсов могут отличаться по размеру и расположению относительно центра из-за этого параметра*/
+	width:100%;
+	word-break: normal;
 }
 /* Для +-средних-маленьких экранов*/
 @media all and (max-width: 1060px){
+.course, .lesson /* Настройка черных границ таблиц для маленьких экранов */
+{
+	padding:10px;
+	border:1px solid black;
+	border-bottom:0px;
+}
+.content-dist-ex .cell:last-child .lesson:last-child /* Настройка черных границ таблиц для маленьких экранов */
+{
+	padding:10px;
+	border-bottom:1px solid black;
+}
 .cell /*Блок ячейки номера курса и учебных групп */
 {
 	display:flex;
@@ -317,8 +347,287 @@ body /* Тело */
 {
 	font-size:150%;
 }
-.lesson /*Блок учебных групп внутри cell */
+.groups /*Блок учебных групп внутри cell */
 {
 	width:100%;
 }
+}
+/*                                                                                       АПИС                                    */
+.content-apis
+{
+	width:98%;
+	padding-left:1%;
+}
+.header-apis /* Блок заголовка-названия страницы*/
+{
+	display: flex;
+	justify-content: center;
+	font-size:150%;
+	font-weight: bold;
+	margin-bottom:30px;
+}
+.navigation-apis
+{
+	display: flex;
+	justify-content: center;
+	flex-direction: row;
+	padding-bottom:30px;
+}
+.calendar-apis
+{
+
+}
+.indent-apis
+{
+	padding-top:25px;
+	padding-bottom:25px;
+}
+.calendar-table-apis 
+{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.calendar-table-apis .cal-tab-row:first-child
+{
+	background-color:#DCDCDC;
+}
+.cal-tab-row
+{
+	width:100%;
+	display:flex;
+	justify-content: center;
+	background-color:#eeeeee;
+	border-bottom:3px solid #DCDCDC;
+}
+.cal-tab-date 
+{
+	display:flex;
+	justify-content: center;
+	width:12.5%;	
+}
+.cal-tab-time
+{
+	display:flex;
+	justify-content: center;
+	width:12.5%;
+}
+
+.cal-tab-topic
+{
+	display:flex;
+	justify-content: flex-start;
+	width:75%;
+}
+@media all and (max-width: 700px){
+.navigation-apis
+{
+	display: flex;
+	flex-direction: column;
+}
+
+.calendar-table-apis div
+{
+	padding-top:0.5%;
+	padding-bottom:0.5%;
+	
+}
+.calendar-table-apis 
+{
+	width:100%;
+}
+.cal-tab-date 
+{
+	width:25%;
+	word-break:break-all;
+}
+.cal-tab-time
+{
+	width:25%;
+}
+
+.cal-tab-topic
+{
+	width:50%;
+}
+}
+@media all and (min-width: 700px) and (max-width: 1250px){
+.calendar-table-apis div
+{
+	padding-top:0.5%;
+	padding-bottom:0.5%;
+	
+}
+.calendar-table-apis 
+{
+	width:80%;
+	padding-left:10%;
+	
+}
+.cal-tab-date 
+{
+	width:25%;
+}
+.cal-tab-time
+{
+	width:25%;
+}
+
+.cal-tab-topic
+{
+	width:50%;
+}
+}
+@media all and (min-width: 1250px){
+.calendar-table-apis div
+{
+	padding-top:0.5%;
+	padding-bottom:0.5%;
+}
+.calendar-table-apis 
+{
+	width:70%;
+	padding-left:15%;
+}
+}
+.plan-table-apis div
+{
+	padding-top:0.3%;
+	padding-bottom:0.3%;
+}
+.plan-tab-row:nth-child(odd)
+{
+	background-color: whitesmoke;
+}
+.plan-tab-row:first-child
+{
+	display:flex;
+	justify-content: center;
+	background-color:#DCDCDC;
+}
+.plan-table-apis
+{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+.plan-tab-row
+{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+}
+.plan-tab-topic
+{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+	word-break: break-all;
+}
+/*.plan-tab-topic                                            рамка сбоку работает внутри сына а не родителя
+{
+	border-right:5px solid black;
+}*/
+.plan-tab-lit
+{
+	display: flex;
+	flex-direction: column;
+	width:100%;
+	word-break: break-all;
+}
+
+@media all and (max-width: 700px){
+.plan-tab-row:first-child
+{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.plan-table-apis
+{
+	width: 100%;	
+}
+.plan-tab-row
+{
+	display: flex;
+	flex-direction: column;
+}	
+.plan-tab-row:nth-child(even)
+{
+	border-bottom:5px solid #DCDCDC;
+}
+.plan-tab-topic
+{
+	margin-bottom:10px;
+}
+}
+@media all and (min-width: 700px){
+.plan-table-apis
+{
+	width:90%;
+	padding-left:5%;
+}
+}
+.attend-table-apis
+{
+	display: table;
+	width:10%;
+	box-sizing: border-box;
+	border-collapse: collapse;
+	empty-cells: show; 
+}
+.attend-tab-row
+{
+	width:100%;
+	display: table-row;
+
+}
+.attend-tab-surname
+{
+	display: table-cell;
+	padding: 10px;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+	text-align: left;
+	width:10%;
+
+}
+.attend-tab-date
+{
+	transform: rotate(-90deg);
+	display: table-cell;
+	text-align:right;
+	padding: 10px;
+	border-left:1px solid black;
+	border-bottom: 1px solid black;
+	width:1%;
+	height: 50px;
+}
+.attend-tab-pres
+{
+	display: table-cell;
+	text-align:center;
+	padding: 10px;
+	border-left:1px solid black;
+	border-bottom: 1px solid black;
+	width:1%;
+}
+.attend-tab-surname:first-child
+{
+	border-top: 0px;
+}
+.transform
+{
+	transform: rotate(-90deg);
+}
+.supmat-apis
+{
+	display: flex;
+	flex-direction: column;
+}
+.prac-tasks-apis
+{
+	display: flex;
+	flex-direction: column;
 }
