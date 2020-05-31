@@ -672,7 +672,45 @@ body /* Тело */
 	flex-direction: column;
 	justify-content: center;
 }
+.tp-apis-check
+{
+	display: flex;
+	flex-direction: column;
+	background-color:whitesmoke;
+	padding-left:15px;
+	padding-top:10px;
+}
+.filezone-row-apis
+{
+	display: flex;
+	flex-direction: row;
+	background-color:white;
+	border: solid 1px #DCDCDC;
+	width:165px;
+}
+.filezone-row-apis:last-child
+{
+	margin-bottom:10px;
+}
 
+.choice
+{
+	padding-bottom:10px;
+}
+.textarea-apis
+{
+	width:60%;
+	height:80px;
+}
+.tp-apis-answer
+{
+	display: flex;
+	flex-direction: column;
+	background-color:whitesmoke;
+	padding-left:15px;
+	margin-top:10px;
+	padding-top:10px;
+}
 .prac-tasks-apis
 {
 	display: flex;
