@@ -366,33 +366,29 @@ body /* Тело */
 	font-weight: bold;
 	margin-bottom:30px;
 }
-.navigation-apis
+.navigation-apis /*Блок навигации*/
 {
 	display: flex;
 	justify-content: center;
 	flex-direction: row;
 	padding-bottom:30px;
 }
-.calendar-apis
-{
-
-}
-.indent-apis
+.indent-apis/*Стиль, задающий отступы сверху и снизу в 25 px*/
 {
 	padding-top:25px;
 	padding-bottom:25px;
 }
-.calendar-table-apis 
+.calendar-table-apis /*Блок календаря мероприятий*/
 {
 	display:flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.calendar-table-apis .cal-tab-row:first-child
+.calendar-table-apis .cal-tab-row:first-child /*Цвет заголовочной строки в блоке календаря*/
 {
 	background-color:#DCDCDC;
 }
-.cal-tab-row
+.cal-tab-row/*Строка в блоке календаря*/
 {
 	width:100%;
 	display:flex;
@@ -400,27 +396,27 @@ body /* Тело */
 	background-color:#eeeeee;
 	border-bottom:3px solid #DCDCDC;
 }
-.cal-tab-date 
+.cal-tab-date/*Столбец дат календаря*/
 {
 	display:flex;
 	justify-content: center;
 	width:12.5%;	
 }
-.cal-tab-time
+.cal-tab-time/*Столбец времени календаря*/
 {
 	display:flex;
 	justify-content: center;
 	width:12.5%;
 }
 
-.cal-tab-topic
+.cal-tab-topic/*Столбец тем календаря*/
 {
 	display:flex;
 	justify-content: flex-start;
 	width:75%;
 }
 @media all and (max-width: 820px){
-.navigation-apis
+.navigation-apis/*Блок навигации*/
 {
 	display: flex;
 	flex-direction: column;
@@ -428,110 +424,106 @@ body /* Тело */
 
 }
 @media all and (max-width: 700px){
-.calendar-table-apis div
+.calendar-table-apis div /*Отступы между строками для маленьких экранов*/
 {
 	padding-top:0.5%;
 	padding-bottom:0.5%;
 	
 }
-.calendar-table-apis 
+.calendar-table-apis /*Блок календаря мероприятий*/
 {
 	width:100%;
 }
-.cal-tab-date 
+.cal-tab-date /*Столбец дат календаря*/
 {
 	width:25%;
 	word-break:break-all;
 }
-.cal-tab-time
+.cal-tab-time/*Столбец времени календаря*/
 {
 	width:25%;
 }
 
-.cal-tab-topic
+.cal-tab-topic/*Столбец тем календаря*/
 {
 	width:50%;
 }
 }
 @media all and (min-width: 700px) and (max-width: 1250px){
-.calendar-table-apis div
+.calendar-table-apis div//*Отступы между строками для маленьких экранов*/
 {
 	padding-top:0.5%;
 	padding-bottom:0.5%;
 	
 }
-.calendar-table-apis 
+.calendar-table-apis /*Блок календаря мероприятий*/
 {
 	width:80%;
 	padding-left:10%;
 	
 }
-.cal-tab-date 
+.cal-tab-date /*Столбец дат календаря*/
 {
 	width:25%;
 }
-.cal-tab-time
+.cal-tab-time/*Столбец времени календаря*/
 {
 	width:25%;
 }
 
-.cal-tab-topic
+.cal-tab-topic/*Столбец тем календаря*/
 {
 	width:50%;
 }
 }
 @media all and (min-width: 1250px){
-.calendar-table-apis div
+.calendar-table-apis div/*Отступы между строками для маленьких экранов*/
 {
 	padding-top:0.5%;
 	padding-bottom:0.5%;
 }
-.calendar-table-apis 
+.calendar-table-apis /*Блок календаря мероприятий*/
 {
 	width:70%;
 	padding-left:15%;
 }
 }
-.plan-table-apis div
+.plan-table-apis div/*Отступы в плане лекций*/
 {
 	padding-top:0.3%;
 	padding-bottom:0.3%;
 }
-.plan-tab-row:nth-child(odd)
+.plan-tab-row:nth-child(odd)/*Нечетные строки таблицы*/
 {
 	background-color: whitesmoke;
 }
-.plan-tab-row:first-child
+.plan-tab-row:first-child/*Цвет первой строки*/
 {
 	display:flex;
 	justify-content: center;
 	background-color:#DCDCDC;
 }
-.plan-table-apis
+.plan-table-apis/*Таблица плана лекций и лит-ры*/
 {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 }
-.plan-tab-row
+.plan-tab-row/*Строка таблица плана лекций и лит-ры*/
 {
 	width:100%;
 	display: flex;
 	flex-direction: row;
 	padding:0!important;
 }
-.plan-tab-topic
+.plan-tab-topic/*Строка тем плана лекций и лит-ры*/
 {
 	display: flex;
 	flex-direction: column;
 	width:100%;
 	word-break: break-all;
 }
-/*.plan-tab-topic                                            рамка сбоку работает внутри сына а не родителя
-{
-	border-right:5px solid black;
-}*/
-.plan-tab-lit
+.plan-tab-lit/*Столбец лит-ры плана лекций и лит-ры*/
 {
 	display: flex;
 	flex-direction: column;
@@ -541,56 +533,56 @@ body /* Тело */
 }
 
 @media all and (max-width: 700px){
-.plan-tab-row:first-child
+.plan-tab-row:first-child/*Первая строка*/
 {
 	display:flex;
 	justify-content: center;
 	align-items: center;
 }
 
-.plan-table-apis
+.plan-table-apis/*Таблица плана лекций и лит-ры*/
 {
 	width: 100%;	
 }
-.plan-tab-row
+.plan-tab-row/*Строка таблицы*/
 {
 	display: flex;
 	flex-direction: column;
 }	
-.plan-tab-row:nth-child(even)
+.plan-tab-row:nth-child(even)/*Рамки нечетных строк*/
 {
 	border-bottom:5px solid #DCDCDC;
 }
-.plan-tab-lit
+.plan-tab-lit/*Столбец лит-ры*/
 {
 	border-left:0px;
 }
-.plan-tab-topic
+.plan-tab-topic/*Столбец тем*/
 {
 	margin-bottom:10px;
 }
 }
 @media all and (min-width: 700px){
-.plan-table-apis
+.plan-table-apis/*Таблица плана лекций и лит-ры*/
 {
 	width:90%;
 	padding-left:5%;
 }
 }
-.supmat-apis
+.supmat-apis/*Блок вспомогательных материалов*/
 {
 	display: flex;
 	flex-direction: column;
 }
 /* */
-.attend-table-apis 
+.attend-table-apis/*Таблица посещения(тут началась жесть)*/
 {
     border: none;
     border-collapse: separate;
     border-spacing: 0;
     font: normal 13px Arial, sans-serif;
 }
-.attend-table-apis thead th 
+.attend-table-apis thead th /*Таблица посещения*/
 {
     background-color: #DCDCDC;
     border: none;
@@ -599,18 +591,18 @@ body /* Тело */
     text-shadow: 1px 1px 1px #fff;
     white-space: nowrap;
 }
-.attend-table-apis tbody td 
+.attend-table-apis tbody td /*Таблица посещения*/
 {
     border-bottom: solid 1px #DCDCDC;
     padding: 10px;
     text-shadow: 1px 1px 1px #fff;
     white-space: nowrap;
 }
-.attend-tab-wrapper
+.attend-tab-wrapper /*Таблица посещения*/
 {
     position: relative;
 }
-.attend-tab-scroller 
+.attend-tab-scroller /*Таблица посещения, скроллер*/
 {
     margin-left: 141px;
     overflow-x: scroll;
@@ -618,12 +610,12 @@ body /* Тело */
     padding-bottom: 5px;
     width: 500px;
 }
-.attend-table-position
+.attend-table-position/*Размещение таблицы относительно центра*/
 {
 	display: flex;
 	justify-content: center;
 }
-.attend-table-apis .attend-tab-row 
+.attend-table-apis .attend-tab-row /*Таблица посещения*/
 {
     border-left: solid 1px #DCDCDC;
     border-right: solid 1px #DCDCDC;
@@ -632,30 +624,30 @@ body /* Тело */
     top: auto;
     width: 120px;
 }
-.center-position
+.center-position/*Положение плюсиков или минусиков по центру внутри ячеек*/
 {
 	text-align: center;
 	border-right: solid 1px #DCDCDC;
 }
 @media all and (max-width: 700px){
-.attend-tab-scroller 
+.attend-tab-scroller /*Таблица посещения*/
 {
 	width:400px;
 }
 }
 @media all and (max-width: 550px){
-.attend-tab-scroller 
+.attend-tab-scroller /*Таблица посещения*/
 {
 	width:165px;
 }
 }
-.mat-lec-wrapper
+.mat-lec-wrapper/*Материалы к лекциям*/
 {
 	padding-left:20px;
 	display: flex;
 	justify-content: left;
 }
-.mat-lec-pic
+.mat-lec-pic/*Оранжевая картинка*/
 {
 	display: flex;
 	flex-direction: column;
@@ -664,7 +656,7 @@ body /* Тело */
 	width:150px;
 	background-color: #FFEFD5;
 }
-.mat-lec-pic-text
+.mat-lec-pic-text/*Текст под оранжевой картинкой*/
 {
 	padding-top:30px;
 	padding-bottom:30px;
@@ -672,7 +664,7 @@ body /* Тело */
 	flex-direction: column;
 	justify-content: center;
 }
-.tp-apis-check
+.tp-apis-check/*Первый серый блок в курсовых работах*/
 {
 	display: flex;
 	flex-direction: column;
@@ -680,7 +672,7 @@ body /* Тело */
 	padding-left:15px;
 	padding-top:10px;
 }
-.filezone-row-apis
+.filezone-row-apis/*Костыль для пустого места*/
 {
 	display: flex;
 	flex-direction: row;
@@ -688,21 +680,21 @@ body /* Тело */
 	border: solid 1px #DCDCDC;
 	width:165px;
 }
-.filezone-row-apis:last-child
+.filezone-row-apis:last-child/*Отступ*/
 {
 	margin-bottom:10px;
 }
 
-.choice
+.choice/*Строка с выбором фамилии*/
 {
 	padding-bottom:10px;
 }
-.textarea-apis
+.textarea-apis/*Место для комментария*/
 {
 	width:60%;
 	height:80px;
 }
-.tp-apis-answer
+.tp-apis-answer/*Второй серый блок в курсовых работах*/
 {
 	display: flex;
 	flex-direction: column;
@@ -711,7 +703,7 @@ body /* Тело */
 	margin-top:10px;
 	padding-top:10px;
 }
-.prac-tasks-apis
+.prac-tasks-apis/*Практические задания*/
 {
 	display: flex;
 	flex-direction: column;
