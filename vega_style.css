@@ -709,3 +709,101 @@ body /* Тело */
 	flex-direction: column;
 	padding-bottom:30px;
 }
+
+
+
+
+/* СЮДА НЕ СМОТРЕТЬ */
+.content-groups
+{
+	display: flex;
+	flex-direction: column;
+}
+.head-groups
+{
+	text-align: center;
+	font-weight: bold;
+	font-size:120%;
+	padding-bottom:20px;
+}
+.table-groups
+{
+	width:80%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	padding-left:10%;
+	margin-bottom:150px;
+}
+
+.left-table-groups
+{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+.right-table-groups
+{
+	width:100%;
+	display: flex;
+	flex-direction: column;
+}
+.tab-row-groups
+{
+	width:100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+.tab-subgroup-groups
+{
+	width:50%;
+	display: flex;
+	flex-direction: column;
+	padding-top:20px;
+	padding-left:7.5%;
+}
+
+.subgroup-number
+{
+	padding-bottom:20px;
+	font-weight: bold;
+	padding-left:20%;
+}
+.new-student
+{
+	color:#ff0000;
+	font-weight:bold;
+
+}
+
+@media all and (max-width: 900px){
+.table-groups
+{
+	display: flex;
+	flex-direction: column;
+}
+}
+@media all and (max-width: 500px){
+.tab-row-groups
+{
+	display: flex;
+	flex-direction: column;
+}
+.tab-group-groups
+{
+	text-align: center;
+	width:100%;
+}
+.tab-subgroup-groups
+{
+	width:92%;
+	display: flex;
+	justify-content: center;
+	
+}
+.subgroup-number
+{
+	margin-left:10%;
+}
+}
