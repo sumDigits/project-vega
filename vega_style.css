@@ -761,14 +761,14 @@ body /* Тело */
 	display: flex;
 	flex-direction: column;
 	padding-top:20px;
-	padding-left:7.5%;
+		
 }
 
 .subgroup-number
 {
 	padding-bottom:20px;
 	font-weight: bold;
-	padding-left:20%;
+	
 }
 .new-student
 {
@@ -777,14 +777,35 @@ body /* Тело */
 
 }
 
+ol
+{
+	margin-block-start: 0em;
+	margin-block-end: 0em;
+	padding-inline-start:0;
+}
+@media all and (min-width: 900px){
+.tab-subgroup-groups
+{
+	padding-left:16.5%;
+}
+}
 @media all and (max-width: 900px){
+.tab-subgroup-groups
+{
+	padding-left:16.5%;
+}
+
 .table-groups
 {
 	display: flex;
 	flex-direction: column;
 }
 }
-@media all and (max-width: 500px){
+@media all and (max-width: 400px){
+.table-groups
+{
+	margin-bottom:75px;
+}
 .tab-row-groups
 {
 	display: flex;
@@ -797,13 +818,21 @@ body /* Тело */
 }
 .tab-subgroup-groups
 {
-	width:92%;
+	width:82.5%;
 	display: flex;
-	justify-content: center;
-	
+	padding-left:0;
 }
 .subgroup-number
 {
-	margin-left:10%;
+	padding-left:40%;
+}
+.tab-group-groups:last-child
+{
+	padding-top:20px;
+}
+.subgroup-number-inside
+{
+	padding-left:37.5%;
+
 }
 }
